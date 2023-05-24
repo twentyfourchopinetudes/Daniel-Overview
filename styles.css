@@ -13,7 +13,7 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background: linear-gradient(to bottom, #6a00a9, #9c00e6);
   color: #fff;
   padding: 20px;
   display: flex;
@@ -29,17 +29,23 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 main {
   padding: 20px;
   flex-grow: 4;
+}
+
+h1 {
+  font-size: 24px;
 }
 
 p {
