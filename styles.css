@@ -13,7 +13,7 @@ body {
 }
 
 nav {
-  background: linear-gradient(to bottom, #6a00a9, #9c00e6);
+  background: linear-gradient(to bottom, #11001b, #35004e);
   color: #fff;
   padding: 20px;
   display: flex;
@@ -21,10 +21,29 @@ nav {
   align-items: flex-start;
   flex-grow: 0.5;
   transition: flex-grow 0.3s;
+  position: relative;
+  overflow: hidden;
+  border-right: 4px solid #000;
 }
 
-nav:hover {
-  flex-grow: 0.8;
+nav:before,
+nav:after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  bottom: -100px;
+  width: 100%;
+  background: linear-gradient(to bottom, #11001b, #35004e);
+  transform: skewY(-15deg);
+  z-index: -1;
+}
+
+nav:before {
+  left: -50%;
+}
+
+nav:after {
+  right: -50%;
 }
 
 nav ul {
@@ -35,23 +54,42 @@ nav ul {
 
 nav li {
   margin-bottom: 20px;
+  position: relative;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 2px;
   transition: font-size 0.3s;
 }
 
 nav a:hover {
-  font-size: 22px;
+  font-size: 24px; /* Increased font size on hover */
+}
+
+.navbar-item-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding-bottom: 80%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transform-origin: center center;
+  transition: all 0.3s;
+}
+
+nav li:hover .navbar-item-frame {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 main {
   padding: 20px;
   flex-grow: 4;
+  background: linear-gradient(to bottom right, #3b1400, #581800); 
 }
 
 h1 {
