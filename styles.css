@@ -19,7 +19,12 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  flex-grow: 1;
+  flex-grow: 0.5; /* Updated width */
+  transition: flex-grow 0.3s; /* Added transition effect */
+}
+
+nav:hover {
+  flex-grow: 0.8; /* Increased width on hover */
 }
 
 nav ul {
@@ -37,6 +42,11 @@ nav a {
   color: #fff;
   font-size: 20px;
   letter-spacing: 2px;
+  transition: font-size 0.3s; /* Added transition effect */
+}
+
+nav a:hover {
+  font-size: 22px; /* Increased font size on hover */
 }
 
 main {
