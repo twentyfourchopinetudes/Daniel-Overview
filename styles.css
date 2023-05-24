@@ -66,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-  font-size: 24px; /* Increased font size on hover */
+  font-size: 24px;
 }
 
 .navbar-item-frame {
